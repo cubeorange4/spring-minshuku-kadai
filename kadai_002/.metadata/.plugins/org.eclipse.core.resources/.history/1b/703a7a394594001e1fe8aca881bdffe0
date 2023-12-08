@@ -1,0 +1,8 @@
+package com.example.samuraitravel.form;
+
+import lombok.Data;
+
+@Data
+public class RevueForm {
+	@NotBlank(message = )
+}
