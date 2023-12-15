@@ -23,7 +23,7 @@ public class Review {
 	
 	@ManyToOne
 	@JoinColumn(name = "house_id")
-	private House house;
+	private House houseId;
 	
 	@ManyToOne
 	@JoinColumn(name = "name")

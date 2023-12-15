@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<div th:replace="~{fragment :: meta}"></div>
+		
+		<div th:replace="~{fragment :: styles}"></div>
+		
+		<title>レビュー一覧</title>
+	</head>
+	<body>
+		<div class="samuraitravel-wrapper">
+			<div th:replace="~{fragment :: header}"></div>
+			
+			<main>
+				
+			</main>
+		</div>
+	</body>
+</html>

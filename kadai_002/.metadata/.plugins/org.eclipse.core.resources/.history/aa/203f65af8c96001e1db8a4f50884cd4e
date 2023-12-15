@@ -1,0 +1,43 @@
+package com.example.samuraitravel.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.example.samuraitravel.entity.Review;
+import com.example.samuraitravel.form.ReviewForm;
+import com.example.samuraitravel.repository.ReviewRepository;
+import com.example.samuraitravel.service.ReviewService;
+
+@Controller
+public class ReviewController {
+	private final ReviewRepository reviewRepository;
+	private final ReviewService reviewService;
+	
+	public ReviewController(ReviewRepository reviewRepository, ReviewService reviewService) {
+		this.reviewRepository = reviewRepository;
+		this.reviewService = reviewService;
+	}
+	
+	@GetMapping("/houses/show/review")
+	public String index(Model model) {
+		List<Review> review = reviewRepository.findAll();
+		
+		model.addAttribute("review", review);
+		
+		return "houses/show/review/index";
+	}
+	
+	@PostMapping("/houses/review/create")
+	public String create(@ModelAttribute ReviewForm reviewForm, RedirectAttributes redirectAttributes) {
+		reviewService.create(reviewForm);
+		redirectAttributes.addFlashAttribute("successMessage", "レビューを投稿しました");
+		
+		return "redirect:/houses/review";
+	}
+}

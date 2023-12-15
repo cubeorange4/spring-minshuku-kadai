@@ -1,0 +1,18 @@
+package com.example.samuraitravel.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.samuraitravel.repository.ReviewRepository;
+
+@Controller
+public class ReviewController {
+	private final ReviewRepository reviewRepository;
+	
+	public ReviewController(ReviewRepository reviewRepository) {
+		this.reviewRepository = reviewRepository;
+	}
+	
+	@GetMapping("/houses/{id}/review")
+	public String index()
+}

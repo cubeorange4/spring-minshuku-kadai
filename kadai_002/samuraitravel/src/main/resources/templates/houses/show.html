@@ -144,6 +144,16 @@
                                      </div>                                                                                                                    
                                  </div>                                                                                             
                              </div>
+                             <h1 class="mb-4 text-center">レビュー</h1>
+                             <div class="row row-cols-lg-2 g-3 mb-5">
+								 <div class="row" th:each="review : ${review}">
+									 <div class="card h-100">
+										 <div class="card-body">
+											 <h3 class="card-title mb-1" th:text="${review.getName()}"></h3>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
                          </div>
                      </div>
                  </div>
