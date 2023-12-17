@@ -84,14 +84,14 @@ INSERT IGNORE INTO reservations (id, house_id, user_id, checkin_date, checkout_d
 INSERT IGNORE INTO reservations (id, house_id, user_id, checkin_date, checkout_date, number_of_people, amount) VALUES (10, 10, 1, '2023-04-01', '2023-04-02', 6, 10000);
 INSERT IGNORE INTO reservations (id, house_id, user_id, checkin_date, checkout_date, number_of_people, amount) VALUES (11, 11, 1, '2023-04-01', '2023-04-02', 2, 6000);
 
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (1, 1, '侍 太郎', 'test' ,'2');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (2, 1, '侍 太郎', 'test' ,'3');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (3, 1, '侍 太郎', 'test' ,'1');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (4, 1, '侍 太郎', 'test' ,'3');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (5, 1, '侍 太郎', 'test' ,'3');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (6, 1, '侍 太郎', 'test' ,'2');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (7, 1, '侍 太郎', 'test' ,'3');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (8, 1, '侍 太郎', 'test' ,'3');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (9, 1, '侍 太郎', 'test' ,'4');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (10, 1, '侍 太郎', 'test' ,'5');
-INSERT IGNORE INTO review (id, house_id, name, content, score) VALUES (11, 1, '侍 太郎', 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (1, 1, 10, 'test' ,'2');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (2, 1, 11, 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (3, 1, 1, 'test' ,'1');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (4, 1, 2, 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (5, 1, 3, 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (6, 1, 4, 'test' ,'2');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (7, 1, 5, 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (8, 1, 6, 'test' ,'3');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (9, 1, 7, 'test' ,'4');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (10, 1, 8, 'test' ,'5');
+INSERT IGNORE INTO review (id, house_id, user_id, content, score) VALUES (11, 1, 9, 'test' ,'3');

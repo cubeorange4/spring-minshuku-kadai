@@ -27,7 +27,7 @@ public class ReviewService {
 	public void create(User user, House house, ReviewRegisterForm reviewRegisterForm) {
 		Review review = new Review();
 		
-		review.setHouseId(house);
+		review.setHouse(house);
 		review.setUser(user);
 		review.setContent(reviewRegisterForm.getContent());
 		review.setScore(reviewRegisterForm.getScore());

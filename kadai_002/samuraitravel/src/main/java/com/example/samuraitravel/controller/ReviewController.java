@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.example.samuraitravel.entity.House;
 import com.example.samuraitravel.entity.Review;
 import com.example.samuraitravel.entity.User;
 import com.example.samuraitravel.form.ReviewEditForm;
@@ -48,6 +49,8 @@ public class ReviewController {
 	
 	@GetMapping("/register")
 	public String register(@PathVariable(name = "houseId") Integer houseId, Model model) {
+		House house = houseRepository.getReferenceById(houseId);
+		model.addAttribute("house", house);
 		model.addAttribute("reviewRegisterForm", new ReviewRegisterForm());
 		return "houses/"+houseId+"/review/register";
 	}
@@ -63,8 +66,9 @@ public class ReviewController {
 			return "houses/"+houseId+"/review/register";
 		}
 		User user = userDetailsImpl.getUser();
+		House house = houseRepository.getReferenceById(houseId);
 		
-		reviewService.create(user, houseId, reviewRegisterForm);
+		reviewService.create(user, house, reviewRegisterForm);
 		redirectAttributeds.addFlashAttribute("seccessMessage", "レビューを投稿しました");
 		
 		return "redirect:/houses/"+houseId+"/review";
@@ -73,7 +77,7 @@ public class ReviewController {
 	@PostMapping("/{reviewId}/edit")
 	public String edit(@PathVariable(name = "houseId") Integer houseId,@PathVariable(name = "reviewId") Integer reviewId, Model model) {
 		Review review = reviewRepository.getReferenceById(reviewId);
-		ReviewEditForm reviewEditForm = new ReviewEditForm(review.getHouseId(), review.getContent(), review.getScore());
+		ReviewEditForm reviewEditForm = new ReviewEditForm(review.getId(), review.getContent(), review.getScore());
 		
 		model.addAttribute("reviewEditForm", reviewEditForm);
 		

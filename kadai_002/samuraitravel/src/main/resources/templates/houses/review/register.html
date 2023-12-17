@@ -23,7 +23,43 @@
                                      <li class="breadcrumb-item active" aria-current="page">レビュー投稿</li>
                                  </ol>
                              </nav>
+                             
+                             <h1 class="mb-4 text-center" th:text="${house.getName()} + のレビュー投稿"></h1>
+                             
+                             <form method="post" th:action="@{/houses/__${house.getId()}__/review/create}" th:object="${reviewRegisterForm}" enctype="multipart/form-data">
+								 <div class="form-group row mb-3">
+                                     <div class="col-md-4">
+                                         <label for="score" class="col-form-label text-md-left fw-bold">評価</label>
+                                     </div>
+                                     <div class="col-md-8">
+                                         <select class="form-control form-select" name="score" th:field="*{score}">
+											 <option value="1">&#9733; &#9734; &#9734; &#9734; &#9734;</option>
+											 <option value="2">&#9733; &#9733; &#9734; &#9734; &#9734;</option>
+											 <option value="3">&#9733; &#9733; &#9733; &#9734; &#9734;</option>
+											 <option value="4">&#9733; &#9733; &#9733; &#9733; &#9734;</option>
+											 <option value="5">&#9733; &#9733; &#9733; &#9733; &#9733;</option>
+                                         </select>
+                                     </div>
+                                 </div>
+                                 <div class="form-group row mb-3">
+                                     <div class="col-md-4">
+                                         <label for="content" class="col-form-label text-md-left fw-bold">コメント</label>
+                                     </div>
+                                     <div class="col-md-8">                                        
+                                         <textarea class="form-control" th:field="*{content}" cols="30" rows="5"></textarea>
+                                     </div>
+                                 </div>
+                                 <div class="form-group d-flex justify-content-center my-4">
+                                     <button type="submit" class="btn text-white shadow-sm w-50 samuraitravel-btn">投稿</button>
+                                 </div>
+                             </form>
+                         </div>
+                     </div>
+				  </div>
              </main>
+             <!-- フッター -->
+             <div th:replace="~{fragment :: footer}"></div>
 		 </div>
+		 <div th:replace="~{fragment :: scripts}"></div>
      </body>
 </html>
