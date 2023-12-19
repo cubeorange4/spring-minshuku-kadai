@@ -24,7 +24,7 @@ public class ReviewService {
 	}
 	
 	@Transactional
-	public void create(House house, User user, ReviewRegisterForm reviewRegisterForm) {
+	public void create(User user, House house, ReviewRegisterForm reviewRegisterForm) {
 		Review review = new Review();
 		
 		review.setHouse(house);

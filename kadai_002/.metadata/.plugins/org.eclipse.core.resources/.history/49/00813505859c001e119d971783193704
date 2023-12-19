@@ -145,7 +145,7 @@
                                  </div>                                                                                             
                              </div>
                              <h1 class="mb-4 text-center">レビュー</h1>
-                             <a class="btn shadow-sm w-100 samuraitravel-btn" sec:authorize="hasRole('ROLE_GENERAL')" th:href="@{/houses/__${house.getId()}__/review/register}">レビューを投稿する</a>
+                             <a class="btn shadow-sm w-100 samuraitravel-btn" sec:authorize="hasRole('ROLE_GENERAL')" th:href="@{/house/__${house.getId()}__/review/register}">レビューを投稿する</a>
                              <div class="row row-cols-lg-2 g-3 mb-5">
 								 <div class="row" th:each="newReview : ${newReview}">
 									 <div class="card">
@@ -195,15 +195,15 @@
 									 </div>
 								 </div>
 							 </div>
-							
+							<!--
 							 <div class="text-center mb-3" th:if="${totalReviewCount > 6}">
-							 	<a  th:href="@{/houses/__${house.getId()}__/review}">すべてのレビューを見る</a>
+							 	<a  th:href="@{/houses/__${house.getId()}__/review">すべてのレビューを見る</a>
 							 </div>
-							 <!--
+							 
 							 <div class="text-center mb-3" th:if="${totalReviewCount = 0}">
 							 	<p>まだレビューがありません。</p>
                         	 </div>
-                        	-->
+                        	 -->
                          </div>
                      </div>
                  </div>
