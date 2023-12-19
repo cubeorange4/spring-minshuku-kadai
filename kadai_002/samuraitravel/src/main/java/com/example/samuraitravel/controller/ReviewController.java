@@ -40,8 +40,8 @@ public class ReviewController {
 	
 	@GetMapping
 	public String index(@PathVariable(name = "houseId") Integer houseId, @PageableDefault(page = 0, size = 10, sort = "id") Pageable pageable, Model model) {
-		Page<Review> reviewPage = reviewRepository.findAll(pageable);
 		House house = houseRepository.getReferenceById(houseId);
+		Page<Review> reviewPage = reviewRepository.findByHouseOrderByCreatedAtDesc(house, pageable);
 		
 		model.addAttribute("house", house);
 		model.addAttribute("reviewPage", reviewPage);
@@ -61,24 +61,24 @@ public class ReviewController {
 	public String create(@PathVariable(name = "houseId") Integer houseId,
 						   @AuthenticationPrincipal UserDetailsImpl userDetailsImpl,
 						   @ModelAttribute @Validated ReviewRegisterForm reviewRegisterForm,
-						   BindingResult bindindResult,
-						   RedirectAttributes redirectAttributeds,
+						   BindingResult bindingResult,
+						   RedirectAttributes redirectAttributes,
 					       Model model) {
 		House house = houseRepository.getReferenceById(houseId);
 		User user = userDetailsImpl.getUser();
 		
-		if(bindindResult.hasErrors()) {
+		if(bindingResult.hasErrors()) {
 			model.addAttribute("house", house);
 			return "review/register";
 		}
 		
 		reviewService.create(house, user, reviewRegisterForm);
-		redirectAttributeds.addFlashAttribute("seccessMessage", "レビューを投稿しました");
+		redirectAttributes.addFlashAttribute("seccessMessage", "レビューを投稿しました");
 		
 		return "redirect:/houses/{houseId}";
 	}
 	
-	@PostMapping("/{reviewId}/edit")
+	@GetMapping("/{reviewId}/edit")
 	public String edit(@PathVariable(name = "houseId") Integer houseId,@PathVariable(name = "reviewId") Integer reviewId, Model model) {
 		Review review = reviewRepository.getReferenceById(reviewId);
 		House house = houseRepository.getReferenceById(houseId);
@@ -105,10 +105,10 @@ public class ReviewController {
 		if(bindingResult.hasErrors()) {
 			model.addAttribute("house", house);
 			model.addAttribute("review", review);
-			return "/review/edit";
+			return "review/edit";
 		}
 		reviewService.update(reviewEditForm);
-		redirectAttributes.addFlashAttribute("seccessMessage", "レビューを編集しました");
+		redirectAttributes.addFlashAttribute("successMessage", "レビューを編集しました");
 		
 		return "redirect:/houses/houseId";
 	}
@@ -116,7 +116,7 @@ public class ReviewController {
 	@PostMapping("/{reviewId}/delete")
 	public String delete(@PathVariable(name = "reviewId")Integer reviewId, RedirectAttributes redirectAttributes) {
 		reviewRepository.deleteById(reviewId);
-		redirectAttributes.addFlashAttribute("seccessMessage", "レビューを削除しました");
+		redirectAttributes.addFlashAttribute("successMessage", "レビューを削除しました");
 		
 		return  "redirect:/houses/{houseId}";
 	}

@@ -2179,3 +2179,21 @@
 2023-12-19 11:27:57,516 [Worker-119: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-12-19 11:27:57,539 [Worker-119: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-12-19 11:27:57,552 [Worker-119: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 18:59:13,667 [Worker-115: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 18:59:13,717 [Worker-115: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 18:59:13,751 [Worker-115: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 18:59:30,520 [Worker-137: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 18:59:30,568 [Worker-137: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 18:59:30,601 [Worker-137: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 19:05:13,664 [Worker-139: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 19:05:13,712 [Worker-139: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 19:05:13,752 [Worker-139: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 19:05:45,474 [Worker-129: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 19:05:45,501 [Worker-129: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 19:05:45,544 [Worker-129: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 19:21:13,518 [Worker-142: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 19:21:13,542 [Worker-142: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 19:21:13,580 [Worker-142: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
+2023-12-19 19:25:24,164 [Worker-142: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-19 19:25:24,196 [Worker-142: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2023-12-19 19:25:24,237 [Worker-142: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_002\samuraitravel\src\test\resources
