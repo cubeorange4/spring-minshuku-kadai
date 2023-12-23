@@ -46,6 +46,6 @@ public class ReviewService {
 	}
 	
 	public boolean hasUserAlreadyReviewed(House house, User user) {
-		return reviewRepository.findByHouseAndUser(house, user) != null;
+		return reviewRepository.findFirstByHouseAndUser(house, user) != null;
 	}
 }

@@ -12,7 +12,7 @@ import com.example.samuraitravel.entity.User;
 
 public interface ReviewRepository extends JpaRepository<Review, Integer>{
 	public List<Review> findTop6ByHouseOrderByCreatedAtDesc(House house);
-	public Review findByHouseAndUser(House house, User user);
+	public Review findFirstByHouseAndUser(House house, User user);
 	public long countByHouse(House house);
 	public Page<Review> findByHouseOrderByCreatedAtDesc(House house, Pageable pageable);
 }
