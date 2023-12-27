@@ -12,7 +12,7 @@ import com.example.samuraitravel.repository.FavoriteRepository;
 public class FavoriteService {
 	private final FavoriteRepository favoriteRepository;
 	
-	private FavoriteService(FavoriteRepository favoriteRepository) {
+	public FavoriteService(FavoriteRepository favoriteRepository) {
 		this.favoriteRepository = favoriteRepository;
 	}
 	

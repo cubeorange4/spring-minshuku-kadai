@@ -57,7 +57,16 @@ public class FavoriteController {
 		
 		favoriteService.create(house, user);
 		
-		return "redirect:/favorite";
+		return "redirect:/house/{houseId}";
+	}
+	
+	@PostMapping("house/{houseId}/favorite/{favoriteId}/delete")
+	public String delete(@PathVariable(name = "favoriteId") Integer favoriteId, RedirectAttributes redirectAttributes) {
+		favoriteRepository.deleteById(favoriteId);
+		
+		redirectAttributes.addFlashAttribute("successMessage", "お気に入りを削除しました。");
+		
+		return "redirect:/house/{houseId}";
 	}
 	
 	

@@ -4,6 +4,7 @@ package com.example.samuraitravel.controller;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,17 +12,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.samuraitravel.entity.Favorite;
 import com.example.samuraitravel.entity.House;
+import com.example.samuraitravel.entity.User;
 import com.example.samuraitravel.form.ReservationInputForm;
+import com.example.samuraitravel.repository.FavoriteRepository;
 import com.example.samuraitravel.repository.HouseRepository;
+import com.example.samuraitravel.security.UserDetailsImpl;
+import com.example.samuraitravel.service.FavoriteService;
  
  @Controller
  @RequestMapping("/houses")
 public class HouseController {
-     private final HouseRepository houseRepository;        
+     private final HouseRepository houseRepository;
+     private final FavoriteService favoriteService;
+     private final FavoriteRepository favoriteRepository;
      
-     public HouseController(HouseRepository houseRepository) {
-         this.houseRepository = houseRepository;            
+     public HouseController(HouseRepository houseRepository, FavoriteService favoriteService, FavoriteRepository favoriteRepository) {
+         this.houseRepository = houseRepository; 
+         this.favoriteService = favoriteService;
+         this.favoriteRepository = favoriteRepository;
      }     
    
      @GetMapping
@@ -70,11 +80,23 @@ public class HouseController {
      }
      
      @GetMapping("/{id}")
-     public String show(@PathVariable(name = "id") Integer id, Model model) {
+     public String show(@PathVariable(name = "id") Integer id, Model model, @AuthenticationPrincipal UserDetailsImpl userDetailsImpl) {
          House house = houseRepository.getReferenceById(id);
+         
+         Favorite favorite = null;
+         boolean isFavorite = false;
+         if(userDetailsImpl != null) {
+        	 User user = userDetailsImpl.getUser();
+        	 isFavorite = favoriteService.isFavorite(house, user);
+        	 if(isFavorite) {
+        		 favorite = favoriteRepository.findByHouseAndUser(house,user);
+        	 }
+         }
          
          model.addAttribute("house", house); 
          model.addAttribute("reservationInputForm", new ReservationInputForm());
+         model.addAttribute("isFavorite", isFavorite);
+         model.addAttribute("favorite", favorite);
          
          return "houses/show";
      }

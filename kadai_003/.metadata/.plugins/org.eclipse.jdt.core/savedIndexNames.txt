@@ -57,7 +57,6 @@ INDEX VERSION 1.134+C:\Users\cubeo\Desktop\webƒfƒUƒCƒ“\kadai_003\.metadata\.plug
 500332760.index
 1399871168.index
 1486209354.index
-2740915860.index
 3651910434.index
 1950690397.index
 908083400.index

@@ -1887,3 +1887,27 @@
 2023-12-25 00:53:36,149 [Worker-42: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-12-25 00:53:36,186 [Worker-42: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
 2023-12-25 00:53:36,224 [Worker-42: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-25 10:56:58,453 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-12-25 20:14:32,019 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-27 23:40:06,313 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-27 23:40:06,349 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2023-12-27 23:40:06,482 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-27 23:46:45,021 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-27 23:46:45,040 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2023-12-27 23:46:45,073 [Worker-61: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-27 23:56:38,785 [Worker-64: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-27 23:56:38,803 [Worker-64: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2023-12-27 23:56:38,841 [Worker-64: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-28 00:03:30,925 [Worker-50: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-28 00:03:30,944 [Worker-50: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2023-12-28 00:03:30,976 [Worker-50: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-28 00:04:20,032 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-28 00:08:03,249 [Worker-0: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-28 00:08:03,281 [Worker-0: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2023-12-28 00:08:03,306 [Worker-0: samuraitravel - SamuraitravelApplication の起動] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-28 00:09:29,719 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-28 00:09:29,733 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-28 00:09:29,744 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
+2023-12-28 00:17:08,566 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-28 00:17:08,579 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-28 00:17:08,586 [Worker-1: ビルド] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\cubeo\Desktop\webデザイン\kadai_003\samuraitravel\src\test\resources
