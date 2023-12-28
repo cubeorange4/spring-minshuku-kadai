@@ -12,13 +12,13 @@ import lombok.Data;
 public class ReviewEditForm {
 	
 	@NotNull
-	private Integer houseId;
-	
-	@NotBlank
-	private String content;
+	private Integer id;
 	
 	@NotNull
 	@Min (value = 1)
 	@Max (value = 5)
 	private Integer score;
+	
+	@NotBlank
+	private String content;
 }

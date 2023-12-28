@@ -37,7 +37,7 @@ public class ReviewService {
 	
 	@Transactional
 	public void update(ReviewEditForm reviewForm) {
-		Review review = reviewRepository.getReferenceById(reviewForm.getHouseId());
+		Review review = reviewRepository.getReferenceById(reviewForm.getId());
 		
 		review.setScore(reviewForm.getScore());
 		review.setContent(reviewForm.getContent());
