@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.example.samuraitravel.form.HouseEditForm"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.form.SignupForm"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.event.SignupEventPublisher"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.service.VerificationTokenService"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="com.example.samuraitravel.entity.User"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.entity.Favorite"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.repository.FavoriteRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 </qualifiedTypeNameHistroy>

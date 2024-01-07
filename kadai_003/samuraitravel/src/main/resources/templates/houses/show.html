@@ -26,12 +26,19 @@
                                  </ol>
                              </nav> 
                              
-                             <div class="position-absolute top-0 end-0">
-								 <!--
-								 <div th:if="">
-								 <button type="submit" class="btn shadow-am">&#9825; お気に入り登録</button>
+                             <div sec:authorize="isAuthenticated()">
+								 
+								 <div th:if="${isFavorite}">
+									 <a href="#" onclick="event.preventDefault(); document.getElementById('favorite-form').submit();">&#9829; お気に入り解除</a>
+									 <form method="post" th:action="@{/houses/__${house.getId()}__/favorite/__${favorite.getId()}__/delete}" id="favorite-form" class="d-none"></form>
+									 
 								 </div>
-								 -->
+								 
+								 <div th:unless="${isFavorite}">
+									 <a href="#" onclick="event.preventDefault(); document.getElementById('favorite-form').submit();">&#9829; お気に入り登録</a>
+									 <form method="post" th:action="@{/houses/__${house.getId()}__/favorite/create}" id="favorite-form" class="d-none"></form>
+									 
+								 </div>
 								 
                              </div>
                              
